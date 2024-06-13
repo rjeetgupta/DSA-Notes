@@ -23,8 +23,9 @@ int secondSmallest(int arr[],int n)
 }
 int secondLargest(int arr[],int n)
 {
-	if(n<2)
-	return -1;
+	if(n<2){
+        return -1;
+    }
     int large=INT_MIN,second_large=INT_MIN;
     int i;
     for (i = 0; i < n; i++) 
