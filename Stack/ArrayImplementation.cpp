@@ -1,49 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct MyStack{
-    int *arr;
-    int cap;
-    int top;
-    MyStack(int c){
-        cap = c;
-        arr = new int[cap];
-        top = -1;
-    }
+class StackImplementation{
+    int top = -1;
+    int st[10];
+
+    public:
     void push(int x){
-        top++;
-        arr[top] = x;
+        if(top >= 10){
+            cout << "Stack is full" << endl;
+            return;
+        }
+        top = top + 1;
+        st[top] = x;
+    }
+
+    int topp(){
+        if(top == -1){
+            cout << "Stack is empty" << endl;
+            return -1;
+        }
+        return st[top];
     }
 
     int pop(){
-        int res = arr[top];
-        res--;
-        return res;
-    }
-
-    int peek(){
-        return arr[top];
-    }
-
-    int size(){
-        return (top + 1);
-    }
-
-    bool isEmpty(){
-        return (top == -1);
+        if(top == -1){
+            cout << "Stack is empty" << endl;
+            return -1;
+        }
+        return st[top - 1];
     }
 };
 
 int main() {
-
-    MyStack st(5);
-    st.push(5);
+    StackImplementation st;
     st.push(10);
     st.push(20);
-
+    cout << st.topp() << endl;
     cout << st.pop() << endl;
-    cout << st.size() << endl;
-    cout << st.peek() << endl;
-    cout << st.isEmpty() << endl;
+    cout << st.topp() << endl;
     return 0;
 }
