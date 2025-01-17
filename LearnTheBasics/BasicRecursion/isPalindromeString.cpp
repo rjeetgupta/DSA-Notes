@@ -17,7 +17,7 @@ bool isPalindrome(string str) {
 
 int main() {
 
-    string str = "A man, a plan, a canal: Panama"
+    string str = "A man, a plan, a canal: Panama";
 
 
     return 0;
