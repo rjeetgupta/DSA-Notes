@@ -2,7 +2,7 @@
 using namespace std;
 
 int findExponentiation(int num, int power) {
-    int m;
+    int m = power;
     // if num is in double like 2.5 like that then take ans in double
     int ans = 1;
     while(power > 0) {
