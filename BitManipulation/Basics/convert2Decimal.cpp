@@ -5,7 +5,7 @@ int convert2Decimal(string str) {
     int len = str.length();
     int p2 = 1, num = 0;
 
-    for (int i = len - 1; i > 0; i++) {
+    for (int i = len - 1; i >= 0; i--) {
         if(str[i] == '1') {
             num = num + p2;
         }

@@ -2,10 +2,9 @@
 using namespace std;
 
 string reverse(string str) {
-    cout << str << "  ";
     int n = str.length() - 1;
     string rev = "";
-    while(n != 0) {
+    while(n >= 0) {
         rev += str[n];
         n--;
     }
@@ -14,7 +13,7 @@ string reverse(string str) {
 
 string convert2Binary(int num) {
     string result = "";
-    while(num != 1) {
+    while(num > 0) {
         if(num % 2 == 1) {
             result += "1";
         } else {
@@ -23,7 +22,7 @@ string convert2Binary(int num) {
         num = num / 2;
     }
 
-    reverse(result);
+    result = reverse(result);
     return result;
 }
 
